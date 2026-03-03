@@ -12,7 +12,6 @@ while True:
     print("\n=== ÍNICIO ===")
     print("1 - Login")
     print("2 - Cadastrar")
-    print("3 - Sair")
 
     opcao = input("Escolha uma opção: ")
 
@@ -56,10 +55,3 @@ while True:
 
         print("Conta atualizada com sucesso!")
 
-    # SAIR
-    elif opcao == "3":
-        print("Saindo...")
-        break
-
-    else:
-        print("Opção inválida.")
