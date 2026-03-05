@@ -15,7 +15,7 @@
 # CONCEITOS  : variáveis, tipos de dados, operadores, estruturas de
 # seleção e de repetição.
 # ===================================================================
-# apresentação organizada do programa
+#
 print("=== SISTEMA DE CONTROLE DE ESTOQUE ===")
 print()
 # lista de produtos no estoque
