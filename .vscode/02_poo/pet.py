@@ -5,13 +5,11 @@
 -autor: Maísa G. Bom
 -conceitos: classe, objeto, método, encapsulamento
 -atividade: classe pet
--obs: pass serve para marcar um luigar de código e 
-não executar o trecho ainda
+-obs: pass serve para marcar um lugar de código e não executar o trecho ainda
 '''
-
 class Pet:
     '''
-    classe que não quarda os dados do pet em um dicionário solto mas
+    classe que não guarda os dados do pet em um dicionário solto mas
     agrupa os dados dentro de uma classe.
     '''
 
@@ -25,17 +23,7 @@ class Pet:
         self.raca = raca
         self.hospedado = False
 
-        '''
-        metodo conscrutor:
-        executado quando um novo objeto pet é criado
-        ex: Parâmetro: self
-        '''
-
     def exibir_dados(self):
-        '''
-        exibe os dados principais do pet como nome, idade e hospedagem
-        '''
-
         print("\n---Dados do Pet---")
         print(f"Nome: {self.nome}")
         print(f"Espécie: {self.especie}")
@@ -46,27 +34,30 @@ class Pet:
         print(f"Peso: {self.peso} kg")
         print(f"Hospedado: {'Sim' if self.hospedado else 'Não'}")
 
-    def registrar_entrada(self):
+    def alterar_hospedagem(self, status):
         '''
-        registra a entrada do pet no hotel e se o pet ainda não
-        estiver hsopedado, muda o atributo hospedado para True
+        altera o estado de hospedagem do pet
         '''
-        if not self.hospedado:
-            self.hospedado = True
-            print(f"{self.nome} entrou no hotel.")
+        if self.hospedado == status:
+            estado = "já está hospedado" if status else "não está hospedado"
+            print(f"{self.nome} {estado}.")
         else:
-            print(f"{self.nome} já está hospedado.")
+            self.hospedado = status
+            acao = "entrou no hotel" if status else "saiu do hotel"
+            print(f"{self.nome} {acao}.")
+
+    def registrar_entrada(self):
+        self.alterar_hospedagem(True)
 
     def registrar_saida(self):
-        '''
-        Registra a saída do pet do hotel e muda o atributo
-        true para false
-        '''
-        self.hospedado = False
-        print(f"{self.nome} saiu do hotel.")
+        self.alterar_hospedagem(False)
 
     def calcular_diaria(self):
-        if self.idade <= 3:#analiza a idade do pet e calcula a diaria
+        if self.idade > 20:
+            print(f"{self.nome} não pode se hospedar no hotel por ter mais de 30 anos.")
+            return None  # indica que não há diária calculada
+        
+        if self.idade <= 3:
             valor = 50
         elif self.idade <= 10:
             valor = 60
@@ -74,7 +65,6 @@ class Pet:
             valor = 75
 
         print(f"A diária do pet {self.nome} é R$ {valor}")
-        
         return valor
     
     def verificar_vacinacao(self):
@@ -91,14 +81,35 @@ class Pet:
         print(f"Nome: {self.nome} - Espécie: {self.especie} - Idade: {self.idade} - Peso: {self.peso} kg")
 
 
-
+# TESTES
+'''
+aqui chama o init (que é o construtor das classes) 
+para mostrar os objetos pet1, pet2 e pet3 com os dados fornecidos 
+'''
 pet1 = Pet("Maia", "Cachorro", 1, True, "Angelo", "Pastor Alemão", 20)
-pet2 = Pet("Mitz", "Gato", 6, True, "Maísa", "Angorá", 5)
-pet3 = Pet("Feijão", "Cachorro", 5, False, "Pedro", "Vira-lata", 15)
+pet2 = Pet("Mitz", "Gato", 11, True, "Maísa", "Angorá", 5)
+pet3 = Pet("Feijão", "Cachorro", 21, False, "Pedro", "Vira-lata", 15)
 
 pet1.exibir_dados()
 pet1.registrar_entrada()
+pet1.registrar_saida()
 pet1.calcular_diaria()
 pet1.verificar_vacinacao()
-pet1.atualizar_peso(22)
+pet1.atualizar_peso(21)
 pet1.emitir_resumo()
+
+pet2.exibir_dados()
+pet2.registrar_entrada()
+pet2.registrar_saida
+pet2.calcular_diaria()
+pet2.verificar_vacinacao()
+pet2.atualizar_peso(6)
+pet2.emitir_resumo()
+
+pet3.exibir_dados()
+pet3.registrar_saida() 
+pet3.registrar_entrada()
+pet3.calcular_diaria()
+pet3.verificar_vacinacao()
+pet3.atualizar_peso(16)
+pet3.emitir_resumo()
