@@ -54,7 +54,7 @@ class Pet:
 
     def calcular_diaria(self):
         if self.idade > 20:
-            print(f"{self.nome} não pode se hospedar no hotel por ter mais de 30 anos.")
+            print(f"{self.nome} não pode se hospedar no hotel por ter mais de 20 anos.")
             return None  # indica que não há diária calculada
         
         if self.idade <= 3:
