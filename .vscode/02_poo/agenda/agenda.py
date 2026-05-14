@@ -1,20 +1,13 @@
-# ===================================================
-# Disciplina : Programação de Sistemas
-# Aula       : 23 — Menu interativo e persistência de objetos
-# Tipo       : Gabarito (Mão na Massa)
-# Autor      : Profe. Berssa
-# Data       : 2026
-# Descrição  : Agenda de Contatos com menu, CRUD em memória
-#               e dois formatos de persistência (.txt e binário).
-#               Serve de modelo para o Sistema de Hotel para Pets V2.0.
-#
-# ===================================================
-
-# ===================================================
-# Arquivo    : agenda.py
-# Autor      : Maísa G. Bom
-# Descrição  : Agenda de Contatos com menu interativo
-# ===================================================
+'''
+- Disciplina : Programação de Sistemas
+- Aula       : 23 — Menu interativo e persistência de objetos
+- Tipo       : Gabarito (Mão na Massa)
+- Autor      : Maísa G Bom
+- Data       : 2026
+- Descrição  : Agenda de Contatos com menu, CRUD em memória
+-               e dois formatos de persistência (.txt e binário).
+-               Serve de modelo para o Sistema de Hotel para Pets V2.0.
+'''
 
 import pickle
 

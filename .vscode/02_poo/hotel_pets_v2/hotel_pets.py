@@ -1,14 +1,13 @@
-# ===================================================
-# Disciplina : Programação de Sistemas
-# Aula       : 23 — Menu interativo e persistência de objetos
-# Tipo       : Gabarito (Mão na Massa)
-# Autor      : Profe. Berssa
-# Data       : 2026
-# Descrição  : Agenda de Contatos com menu, CRUD em memória
-#               e dois formatos de persistência (.txt e binário).
-#               Serve de modelo para o Sistema de Hotel para Pets V2.0.
-#
-# ===================================================
+'''
+- Disciplina : Programação de Sistemas
+- Aula       : 23 — Menu interativo e persistência de objetos
+- Tipo       : Gabarito (Mão na Massa)
+- Autor      : MAísa G Bom
+- Data       : 2026
+- Descrição  : Agenda de Contatos com menu, CRUD em memória
+-               e dois formatos de persistência (.txt e binário).
+-               Serve de modelo para o Sistema de Hotel para Pets V2.0.
+'''
 
 # Importamos pickle: módulo padrão do Python para "serializar" objetos
 # (transformar um objeto Python em bytes que podem ser gravados em disco
